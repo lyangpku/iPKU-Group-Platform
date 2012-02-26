@@ -1,0 +1,15 @@
+.circle-users.box
+  .title= t '.title'
+  .circles-table
+    %table
+      %thead
+        %tr
+          %th=t '.circle'
+          %th=t '.circle-members'
+          %th
+      %tbody
+        - @circles.each do |circle|
+          %tr
+            %td= link_to circle.name, circle
+            %td= circle.users.count
+            %td

@@ -1,0 +1,49 @@
+// Place all the styles related to the profiles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'css3';
+@import 'mixin';
+
+.field.avatar.img {
+  width: 128px;
+}
+
+.box.profile.form {
+  textarea { 
+    width: 100%; 
+    font-size: 18px;
+  }
+  label { width: 50px; }
+  form { width: 480px; }
+  margin-bottom: 0px;
+}
+
+.groups.profile, .activities.profile, .like.profile, .fans.profile {
+  margin-bottom: 50px;
+  .list {
+    @include box-radius;
+    @include box-gradual-change;
+    @include box-shadow2;
+    padding: 25px 20px;
+  }
+  ul { overflow: hidden; margin-right: -8px; }
+  li {
+    list-style: none;
+    float: left;
+    margin: 8px;
+  }
+}
+
+.user.board {
+  overflow: hidden;
+  .avatar { margin-bottom: 20px; }
+  .like { @include link; text-align: center; }
+  .nickname { @include blue; margin-bottom: 5px; }
+  .description { margin-bottom: 10px; }
+  .meta {
+    font-size: 14px;
+    color: #005EAC;
+    text-align: right;
+  }
+}

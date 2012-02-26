@@ -1,0 +1,18 @@
+.blog
+  .box.detail
+    .box-header
+      = @blog.title
+      .clear
+    .box-body
+      .blog-info
+        = "#{t :from} "
+        = link_to(@blog.author.name,@blog.author)
+        = ", "
+        = l @blog.created_at,:format=>:long
+      .blog-content
+        =  sanitize(blog.content, :attributes => %w(id class style href _cke_saved_href title alt width height))          
+  .comments
+    .header
+      %span= t :comment
+    .list
+      = render :partial => "share/comments", :locals => { :object => @blog }

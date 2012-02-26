@@ -1,0 +1,10 @@
+.activities
+  .header
+    %span= t :activity
+  .list
+    - if @group.activities.empty?
+      .warn= t '.warn'
+    - else
+      = render :partial => 'activities/card', :collection => @group.activities.last(3), :as => :activity
+    .more
+      = link_to (t '.more'), activities_group_path if @more

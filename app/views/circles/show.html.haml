@@ -1,0 +1,17 @@
+.circle-users.box
+  .title= t '.title'
+  .users-table
+    %table
+      %thead
+        %tr
+          %th
+          %th=t '.user-name'
+          %th=t '.user-phone'
+          %th
+      %tbody
+        - @circle.users.each do |user|
+          %tr
+            %td.pic= link_to image_tag(user.url), user
+            %td.user-name= link_to user.profile.name, user
+            %td.user-phone= link_to user.profile.phone
+            %td

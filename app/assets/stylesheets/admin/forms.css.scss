@@ -1,0 +1,30 @@
+// Place all the styles related to the admin::forms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'mixin';
+
+.app-form {
+  @include orange-link;
+  .head { 
+    text-align: center;
+    @include orange; 
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  @include back;
+  .new {
+    float: right;
+    @include blue-link;
+    font-size: 26px;
+    margin-top: 5px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+  }
+  th { background-color: #AAFFFF; }
+  tr.odd { background-color: #FFFFFF; }
+  tr.even { background-color: #EFF7FF; }  
+}

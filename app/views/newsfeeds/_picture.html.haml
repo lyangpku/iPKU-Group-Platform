@@ -1,0 +1,20 @@
+.newsfeed{:id => "event-#{event.id}"}
+  .avatar
+    = link_to (image_tag subject.url), subject
+  .wrapper
+    .top
+      = link_to subject.name, subject
+      = t '.action'
+      = link_to picture.bare_name, picture
+    .center.small
+      .thumb= image_tag picture.thumb
+      .medium= image_tag picture.medium
+    .bottom
+      %span.time
+        = distance_of_time_in_words_to_now(event.created_at)
+        = t 'newsfeeds.before'
+      %span.from
+        = t 'newsfeeds.from'
+        = link_to picture.imageable.name, picture.imageable
+      %span.meta
+        = t 'newsfeeds.comments', :count => picture.comments.count

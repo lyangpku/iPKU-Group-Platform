@@ -1,0 +1,14 @@
+.admin.app-form 
+  .back
+    = link_to (t '.back'), group_path
+  .title
+    = t '.title'
+  %table
+    %tr
+      %th= t ".name"
+      %th= t ".nick"
+      %th= t ".id"
+      %th= t ".status"
+    = render :partial => 'part', :locals => { :members => @tenders }
+    = render :partial => 'part', :locals => { :members => @admins  }
+    = render :partial => 'part', :locals => { :members => @members }

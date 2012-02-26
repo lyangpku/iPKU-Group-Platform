@@ -1,0 +1,307 @@
+@import 'css3';
+@import 'mixin';
+
+table { 
+  width: 100%; 
+  tr { margin: 5px 0px; }
+}
+
+.clear { clear: both; }
+
+.field_with_errors { 
+  display: inline; 
+  input { background-color: #DDD; }
+}
+
+.content.show, .container.profile {
+  .header {
+    span { 
+      @include orange; 
+      @include box-radius(10px);
+      @include box-shadow2;
+      background-color: white; 
+      display: inline-block;
+      width: 90px;
+      height: 40px;
+      text-align: center;
+      line-height: 40px;
+      font-size: 20px;
+      margin-left: -30px;
+      margin-right: 20px;
+    }
+    margin-bottom: 20px;
+    line-height: 40px;
+    @include gray-link;
+    a { font-size: 16px; margin-right: 10px; }
+  }
+} 
+
+.secondary {
+  font-size: 15px;
+  li { list-style: none; margin: 5px 0px; }
+  @include blue-link;
+  .first { @include blue; text-align: left; font-size: 20px; }
+}
+
+.orange-link { @include orange-link; }
+
+.box.form {
+  font-size: 14px;
+  form { width: 530px; margin: 0 auto; }
+  .field { margin: 10px 0px; }
+  label { 
+    @include orange; 
+    font-size: 16px;
+    width: 100px;
+    display: inline-block;
+  }
+  textarea { min-height: 100px; }
+  input[type=text], textarea { width: 400px; }
+  .submit { text-align: right; }
+  .actions { text-align: right; }
+}
+
+.search {
+  float: right;
+  .input-wrapper { 
+    margin: 0; 
+    margin-top: 3px;
+    margin-right: 40px;
+    padding: 0;
+    input { font-size: 12px; }
+  }
+}
+
+
+
+body.form {
+  background: url('screen_background.gif') repeat-x;
+  background-color: #EEE;
+  .container { 
+    width: 750px;
+    margin: 100px auto 0px auto;
+  }
+  .title { 
+    @include white-shadow; 
+    span { font-size: 16px; }
+  }
+  .button-wrapper { margin-top: 20px; }
+}
+
+
+.gogo.card {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: #005EAC;
+  @include link;
+  .avatar { 
+    float: left;
+    img { @include box-radius; }
+  }
+  .info { 
+    float: left; 
+  }
+  .name { font-size: 16px; }
+  div { margin-bottom: 5px; }
+}
+
+.highlight {
+  color: #E00034;
+  font-weight: normal;
+}
+
+.sign-in-form {
+  margin-bottom: 35px;
+}
+.input-wrapper {
+  height: 25px;
+  width: 184px;
+  background: #fff;
+  margin: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 5px;
+  input {
+    border: none;
+    background: none;
+    line-height: 20px;
+    font-size: 15px;
+    margin-left:4px;
+    width: 180px;
+    float: right;
+  }
+  @include box-radius(5px);
+  background-image: -o-linear-gradient(90deg , rgb(254,254,254) 0%, rgb(240,240,240) 100%);
+  background-image: -moz-linear-gradient(90deg , rgb(254,254,254) 0%, rgb(240,240,240) 100%);
+  background-image: -webkit-linear-gradient(90deg , rgb(254,254,254) 0%, rgb(240,240,240) 100%);
+  background-image: -ms-linear-gradient(90deg , rgb(254,254,254) 0%, rgb(240,240,240) 100%);
+  background-image: linear-gradient(90deg , rgb(254,254,254) 0%, rgb(240,240,240) 100%);  @include box-inset(1px,0);
+  &.active.hovering, &.active {
+    @include box-shadow(5px,3px);
+    border: 1px solid #eee;
+  }
+  &.hovering {
+    @include box-shadow(10px,2px);
+  }
+  .sprite {
+    width: 16px;
+    height: 16px;
+    float:left;
+    margin-left: -35px;
+    margin-top: 8px;
+  }
+}
+
+.email {
+  .sprite {
+    background-image: url("sprites.png");
+    background-position: 0 0;
+  }
+}
+.password {
+  .sprite {
+    background-image: url("sprites.png");
+    background-position: 0 -25px;
+  } 
+}
+.remember {
+  float: left;
+  margin-left: 4px;
+  font-size: 18px;
+  margin-top: 8px;
+}
+.button-wrapper {
+  &.sign-in {
+    float: right;
+    margin-right: 13px;
+  }
+  &.sign-up {
+    margin-bottom: 30px;
+  }
+  input {
+    background: url("sprites.png");
+    background-position: -21px -4px;
+    width: 96px;
+    height: 45px;
+    border: none;
+    font-size: 18px;
+  }
+  &.hovering {
+    input {background-position: -21px -49px;}
+  }
+}
+
+.submit.button-wrapper { text-align: right; margin-top: 30px; }
+.sign_up.box.form {
+  margin-top: 80px;
+  input[type=email], input[type=password] { width: 400px; }
+  textarea { 
+    width: 100%; 
+    font-size: 18px;
+    margin-top: 20px;
+  }
+}
+.sign-in-form .func { 
+  margin: 20px;
+  font-size: 18px;
+  text-align: right; 
+}
+
+.inset-box {
+  @include box-inset;
+  @include box-radius;
+  background: white;
+  padding: 20px;
+}
+
+.admin-panel {
+  margin-top: 50px;
+  ul { 
+    overflow: hidden; 
+    margin-right: -20px;
+  }
+  li { 
+    list-style: none;
+    @include orange-link;
+    float: left;
+    margin-right: 38px;
+  }
+  .list { 
+    @include box-gradual-change; 
+    @include box-radius;
+    @include box-shadow2;
+    padding: 20px;
+  }
+}
+
+span.cke_skin_kama { border: 0px !important; }
+.field.area label { vertical-align: top; }
+.field { @include blue-link; }
+.func { @include orange-link; @include blue; }
+
+
+.ui-autocomplete {
+  width:150px;
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  li {
+    clear:both;
+    a {
+      display:block;
+      img {width:28px; float:left; border:0;}
+      p {font-size:20px; line-height:30px; margin-left: 50px; display:block;}
+    }
+  }
+}
+
+.textarea-wrapper {
+  textarea {
+  padding-left:3px;
+  background-color:#fafafa;
+  border: 1px solid #ddd;
+  color: #888;
+  font-weight:300;
+  line-height:1.5;
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+  }
+}
+
+#purr-container {
+  position: fixed;
+  bottom: 30px;
+  right: 0;
+  z-index: 100;
+
+  .flashes {
+    position: relative;
+    width: 326px;
+  }
+  .flashes .close  {position: absolute; top: 12px; right: 12px; display: block; width: 18px; height: 17px; text-indent: -9999px; background: url(purrClose.png) no-repeat 0 10px;}
+  
+  .flash-body {
+    min-height: 50px;
+    padding: 22px 22px 0 22px;
+    background: url(purrTop.png) repeat-x;
+    background-size: 100%;
+    color: #f9f9f9;
+    img  {width: 50px; margin: 0 10px 0 0; float: left;}
+    h3 {margin: 0; font-size: 1.1em;}
+    li {list-style:none;}
+  }  
+  
+  .flash-bottom {
+    height: 22px;
+    background: url(purrBottom.png) no-repeat left top;
+    background-size: 100%;
+  }
+}
+
+.list .name {
+  font-size: 10px;
+  text-align: center;
+  @include link;
+}

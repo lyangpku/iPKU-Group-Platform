@@ -1,0 +1,27 @@
+= form_for @group do |f|
+  -if @group.errors.any?
+    #error_explanation
+      %ul
+        - @group.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name, (t '.name')
+    = f.text_field :name
+  .field
+    = f.label :slogan, (t '.slogan')
+    = f.text_field :slogan
+  .field
+    = f.label :email, (t '.email')
+    = f.text_field :email
+  .field
+    = f.label :founded_at, (t '.founded')
+    = f.date_select :founded_at, :start_year => 1980
+  .field
+    = f.label :logo, (t '.logo')
+    = f.file_field :logo
+  .field
+    = f.label :category, (t '.category')
+    = f.collection_select :category_id, Category.all, :id, :translated_name
+  .actions
+    = f.submit ( type == "new" ? t('.next') : t('.done') )

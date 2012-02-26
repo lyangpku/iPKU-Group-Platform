@@ -1,0 +1,35 @@
+= form_tag update_mailboxes_path, :method => :post, :remote => true do
+  = select_tag "option", options_for_select(chops(@options)||[])
+  = submit_tag (t "apply_to_selected"), :class => "submit"
+  = hidden_field_tag :mailbox, @mailbox
+  %table.mail-list{:border => "0", :cellpadding => "0", :cellspacing => "0", :width => "100%"}
+    %thead
+      %tr
+        %th{:scope => "col", :width => "5%"}
+          %input#checkbox.checkall{:name => "checkbox", :type => "checkbox"}/
+        - unless @mailbox == "outbox"
+          %th{:scope => "col", :width => "35%"}=t "from"
+        - else
+          %th{:scope => "col", :width => "35%"}=t "to"
+        %th.nocenter{:scope => "col", :width => "60%"}=t "subject"
+    / check opened message first and then set alternate style
+    %tbody
+      - x = 0
+      - for msg in @messages
+        %tr{:class => ( (@mailbox != "outbox") ? ( msg.read? ? "" : "unread " ) : "" ) }
+          %td{:scope => "col"}= check_box_tag "[messages][]", msg.id
+          %td{:scope => "col"}
+            - unless @mailbox == "outbox"
+              .avatar
+                = link_to image_tag(msg.from.url), msg.from
+              .infos
+                %p= link_to msg.from.name, msg.from
+                %p= l(msg.created_at, :format=>((msg.created_at < 1.days.ago) ? :only_time : :short))
+            - else
+              .avatar
+                = link_to image_tag(msg.to.url), msg.to
+              .infos
+                %p= link_to msg.to.name, msg.to
+                %p= l(msg.created_at, :format=>((msg.created_at < 1.days.ago) ? :only_time : :short))
+          %td{:scope => "col"}= link_to msg.subject, show_mailboxes_path(@mailbox,msg)
+= will_paginate @messages, :class => "pagination"

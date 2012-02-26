@@ -1,0 +1,35 @@
+= form_for @profile, :html => { :multipart => true } do |f|
+  - if @profile.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@profile.errors.count, "error")
+        prohibited this profile from being saved:
+      %ul
+        - @profile.errors.full_messages.each do |msg|
+          %li= msg
+  = f.hidden_field :user_id
+  .field
+    = f.label :name, (t :name)
+    = f.text_field :name
+  .field
+    = f.label :nickname, (t :nickname)
+    = f.text_field :nickname
+  .field
+    = f.label :gender, (t :gender)
+    = f.select :gender, [[t('.male'), 1], [t('.female'), 2]]
+  .field
+    = f.label :student_id, (t :student_id)
+    = f.text_field :student_id
+  .field
+    = f.label :phone, (t :phone)
+    = f.text_field :phone
+  .field.avatar
+    = f.label :avatar, (t :avatar)
+    = f.file_field :avatar
+  .field.avatar.img
+    = image_tag @profile.avatar.url(:small)
+  .clear
+  .field
+    = f.text_area :description, :size => "75x5", :placeholder => "在这儿添加您的个人简介吧！"
+  .actions
+    = f.submit (t "profile-submit")

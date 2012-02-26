@@ -1,0 +1,18 @@
+.gogo.card
+  .avatar
+    = link_to (image_tag current_user.url(:small)), current_user
+  .info
+    .name
+      = link_to current_user.name, current_user
+    .nickname
+      = link_to current_user.nickname.truncate(15), current_user unless current_user.nickname.nil?
+    .points
+      = t :level, :points => current_user.profile.points
+    .meta
+      %div
+        %span= t '.like', :count => current_user.users_i_like.count
+        %span= t '.fans', :count => current_user.users_like_me.count
+      %div
+        %span= t '.groups', :count => current_user.groups.count
+        %span= t '.activities', :count => current_user.activities.count
+  .clear

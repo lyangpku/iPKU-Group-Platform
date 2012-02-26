@@ -1,0 +1,155 @@
+// Place all the styles related to the groups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'css3';
+@import 'mixin';
+
+.group.board { overflow: visible; margin-bottom: 40px; }
+.group.board .side {
+  .action { @include link; }
+  color: #999;
+  text-align: center;
+  .role { margin-bottom: 5px; }
+  .logo { margin-top: -70px; margin-bottom: 10px; }
+  .like-join { margin-bottom: 10px; }
+  .count { margin-bottom: 10px; }
+  .history, .organization, .description { 
+    margin-top: 5px;
+    a { color: #E00034; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  }
+}
+
+.group.form {
+  form { text-align: right; }
+}
+
+.group.info-wrapper, .group-activities, .group-comments {
+  @include title;
+  @include back;
+}
+
+.group-comments {
+  margin-bottom: 50px;
+}
+
+.groups.show .members {
+  margin-bottom: 40px;
+  @include back;
+  @include title;
+  .header  { margin-bottom: 20px; }
+  ul { overflow: hidden; }
+  li {
+    list-style: none;
+    float: left;
+    margin: 10px 10px;
+  }
+  .box { 
+    padding: 10px 20px; 
+    .name { text-align: center; }
+  }
+  .box img { 
+    width: 64px; 
+    @include box-radius(0px);
+  }
+  .name { @include orange-link; }
+}
+
+.group.form.admin { @include back; }
+
+.slink {
+  @include box-gradual-change;
+  @include box-radius;
+  padding: 20px;
+  margin-bottom: 30px;
+  li.first { @include blue; }
+  ul { overflow: hidden; }
+  li { 
+    float: left; 
+    list-style: none; 
+    margin-right: 30px; 
+    @include orange-link;
+  }
+}
+
+.activities .warn { 
+  text-align: center;
+  @include orange;
+}
+
+.content.index .hot {
+  img { width: 100px; margin-right: 20px; }
+  margin-bottom: 30px;
+  .title { margin-bottom: 10px; @include orange; }
+  margin-right: -20px;
+}
+
+.content.wall .hot {
+  .title { 
+    font-size: 30px; 
+    text-align: center; 
+    margin-bottom: 30px; 
+    @include orange;
+  }
+  img { width: 140px; margin-right: 12px; margin-bottom: 10px; }
+  margin-bottom: 30px;
+  margin-right: -15px;
+}
+
+.group.card, .user.card {
+  overflow: hidden;
+  border-bottom: 1px solid #BBB;
+  padding: 20px 0px;
+  font-size: 12px;
+  .name { font-size: 16px; }
+  .category { margin-left: 10px; @include green; }
+  .top, .center { margin-bottom: 5px; }
+  .center { min-height: 75px; }
+  .bottom { color: #7AA5B9; }
+  .meta { float: right; }
+  a { color: #005EAC; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { float: left; width: 120px; @include box-radius(10px); }
+  .info { 
+    float: left;
+    margin-left: 20px;
+    width: 460px;
+  }
+}
+
+.groups.show .admin-panel {
+  margin-bottom: 50px;
+  .header { margin-bottom: 20px; }
+}
+
+.groups.show .activities .list {
+  background-color: white;
+  padding: 20px 30px;
+  margin: 20px 0px 40px 0px;
+  @include box-shadow2;
+  @include box-radius;
+  .more { @include link; text-align: right; padding-top: 10px; }
+}
+
+.group.board.box .info {
+  .head { margin-bottom: 5px; }
+  .category { 
+    margin-left: 10px; 
+    font-size: 14px;
+    @include blue; 
+  }
+  .admin { 
+    margin-bottom: 10px;
+    @include link;
+    @include blue;
+    font-size: 14px;
+  }
+  .admin a:hover { text-decoration: underline; }
+  .introduction { min-height: 160px; }
+  .meta { 
+    font-size: 14px; 
+    color: #005EAC;
+    text-align: right;
+  }
+}

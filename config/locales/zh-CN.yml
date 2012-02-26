@@ -1,0 +1,685 @@
+"zh-CN":
+  category:
+    "sports and fitness": "体育健身"
+    "culture and art": "文化艺术"
+    "public interest and volunteer": "公益志愿"
+    "academic and creation": "学术科创"
+    "practice and progress": "实践促进"
+    "cooperation and communication": "合作交流"
+    "region culture": "地域文化"
+    "political theory": "政治理论"
+
+  time:
+    formats:
+      default: "%Y-%m-%d %A %H:%M "
+      short_w: "%m-%d %A %H:%M"
+      only_time: "当天%H:%M"
+      short: "%m-%d %H:%M"
+      long: "%Y-%m-%d %H:%M"
+    am: "上午"
+    pm: "下午"
+
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%b%d日"
+      long: "%Y年%b%d日"
+    day_names:
+      - 星期日
+      - 星期一
+      - 星期二
+      - 星期三
+      - 星期四
+      - 星期五
+      - 星期六
+    abbr_day_names:
+      - 日
+      - 一
+      - 二
+      - 三
+      - 四
+      - 五
+      - 六
+    month_names:
+      - ~
+      - 一月
+      - 二月
+      - 三月
+      - 四月
+      - 五月
+      - 六月
+      - 七月
+      - 八月
+      - 九月
+      - 十月
+      - 十一月
+      - 十二月
+    abbr_month_names:
+      - ~
+      - 1月
+      - 2月
+      - 3月
+      - 4月
+      - 5月
+      - 6月
+      - 7月
+      - 8月
+      - 9月
+      - 10月
+      - 11月
+      - 12月
+    order:
+      - :year
+      - :month
+      - :day
+
+  datetime:
+    distance_in_words:
+      half_a_minute: "半分钟"
+      less_than_x_seconds:
+        one: "不到一秒"
+        other: "不到 %{count} 秒"
+      x_seconds:
+        one: "一秒"
+        other: "%{count} 秒"
+      less_than_x_minutes:
+        one: "不到一分钟"
+        other: "不到 %{count} 分钟"
+      x_minutes:
+        one: "一分钟"
+        other: "%{count} 分钟"
+      about_x_hours:
+        one: "大约一小时"
+        other: "大约 %{count} 小时"
+      x_days:
+        one: "一天"
+        other: "%{count} 天"
+      about_x_months:
+        one: "大约一个月"
+        other: "大约 %{count} 个月"
+      x_months:
+        one: "一个月"
+        other: "%{count} 个月"
+      about_x_years:
+        one: "大约一年"
+        other: "大约 %{count} 年"
+      over_x_years:
+        one: "一年多"
+        other: "%{count} 年多"
+      almost_x_years:
+        one:   "接近一年"
+        other: "接近 %{count} 年"
+    prompts:
+      year:   "年"
+      month:  "月"
+      day:    "日"
+      hour:   "时"
+      minute: "分"
+      second: "秒"
+
+  number:
+    format:
+      separator: "."
+      delimiter: ","
+      precision: 3
+      significant: false
+      strip_insignificant_zeros: false
+    currency:
+      format:
+        format: "%u %n"
+        unit: "CN¥"
+        separator: "."
+        delimiter: ","
+        precision: 2
+        significant: false
+        strip_insignificant_zeros: false
+    percentage:
+      format:
+        delimiter: ""
+    precision:
+      format:
+        delimiter: ""
+    human:
+      format:
+        delimiter: ""
+        precision: 1
+        significant: false
+        strip_insignificant_zeros: false
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            one: "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand: "千" # 10^3 kilo
+          million: "百万" # 10^6 mega
+          billion: "十亿" # 10^9 giga
+          trillion: "兆" # 10^12 tera
+          quadrillion: "千兆" # 10^15 peta
+          # 10^18 exa, 10^21 zetta, 10^24 yotta
+
+  support:
+    array:
+      words_connector: ", "
+      two_words_connector: " 和 "
+      last_word_connector: ", 和 "
+    select:
+      prompt: "请选择"
+
+  errors:
+    format: "%{attribute}%{message}"
+    messages: &errors_messages
+      inclusion: "不包含于列表中"
+      exclusion: "是保留关键字"
+      invalid: "是无效的"
+      confirmation: "与确认值不匹配"
+      accepted: "必须是可被接受的"
+      empty: "不能留空"
+      blank: "不能为空"
+      too_long: "过长（最长为 %{count} 个字符）"
+      too_short: "过短（最短为 %{count} 个字符）"
+      wrong_length: "长度非法（必须为 %{count} 个字符）"
+      not_a_number: "不是数字"
+      not_an_integer: "必须是整数"
+      greater_than: "必须大于 %{count}"
+      greater_than_or_equal_to: "必须大于或等于 %{count}"
+      equal_to: "必须等于 %{count}"
+      less_than: "必须小于 %{count}"
+      less_than_or_equal_to: "必须小于或等于 %{count}"
+      odd: "必须为单数"
+      even: "必须为双数"
+      taken: "已经被使用"
+      record_invalid: "验证失败: %{errors}"
+    template: &errors_template
+      header:
+        one: "有 1 个错误发生导致「%{model}」无法被保存。"
+        other: "有 %{count} 个错误发生导致「%{model}」无法被保存。"
+      body: "如下字段出现错误："
+
+  activerecord:
+    attributes:
+      group:
+        name: "名称"
+      user:
+        email: "邮箱"
+        password: "密码"
+        profile:
+          name: "姓名"
+          nickname: "昵称"
+          student_id: "学号"
+    errors:
+      full_messages:
+        format: "%{attribute} %{message}"
+      messages:
+        <<: *errors_messages
+      template:
+        <<: *errors_template
+
+  helpers:
+    select:
+      prompt: "请选择"
+    submit:
+      create: "新增%{model}"
+      update: "更新%{model}"
+      submit: "储存%{model}"
+
+  site:
+    index:
+      hotspot: "热点"
+      new: "最新"
+      title: "Ta们正在"
+    home:
+      newsfeed: "新鲜事"
+    newsfeeds:
+      newsfeed: "动态"
+    newsfeed:
+      at: "在"
+      before: "前"
+      action: "%{action}了"
+
+  share:
+    toolbar:
+      friends: "在线好友(%{count})"
+    recommend_activities:
+      title: "推荐活动"
+    hot_activities:
+      title: "热门活动"
+    user_recommend:
+      title: "可能感兴趣的人"
+      indirect: "%{count}个间接关注人"
+    recommend_groups:
+      title: "推荐社团"
+    hot_groups:
+      title: "热门社团"
+    comments:
+      holder: "Ctrl+Enter直接发送"
+      submit: "发表评论"
+      mention: "@某人"
+    comment:
+      sure_to_delete: "确认删除评论？"
+    header:
+      mailbox: "站内信"
+      setting: "设置"
+      logout: "离开"
+      home: "个人首页"
+      group: "社团中心"
+      curgroup: "社团: %{name}"
+      activity: "活动中心"
+      curactivity: "活动: %{name}"
+      admin_blog: "管理日志"
+      admin: "后台管理"
+      groups:
+        new: "+新社团"
+        admin: "社团管理"
+        edit: "信息管理"
+        members: "成员管理"
+        forms: "申请表管理"
+        sms: "短信管理"
+        activities: "社团活动"
+        new_activity: "+社团活动"
+        infos: "社团信息"
+      activities:
+        new: "+新活动"
+        admin: "活动管理"
+        blogs: "所有日志"
+        new_blog: "+新日志"
+        albums: "所有相册"
+        new_picture: "+新图片"
+        edit: "修改活动"
+        group: "承办社团"
+      blogs:
+        delete: "删除日志"
+        edit: "编辑日志"
+        sure: "删除日志后不可恢复，确认删除？"
+      pictures:
+        delete: "删除图片"
+        sure: "删除图片后不可恢复，确认删除？"
+      albums:
+        delete: "删除相册"
+        sure: "删除相册后不可恢复，且所有照片丢失，确认删除？"
+    search:
+      holder: "发现社团/活动/同学..."
+    links:
+      home: "个人中心"
+      group: "社团中心"
+      activity: "活动中心"
+      logout: "退出"
+      admin: "后台管理"
+    navi:
+      home: "个人中心"
+      group: "社团中心"
+      activity: "活动中心"
+
+  devise:
+    registrations:
+      new:
+        title: "注册"
+        male: "男生"
+        female: "女生"
+        name: "姓名"
+        nickname: "昵称"
+        gender: "性别"
+        sid: "学号"
+        phone: "电话"
+        avatar: "头像"
+        holder: "添加您的个人简介吧~"
+    sessions:
+      new:
+        remember_me: "勿忘我"
+
+  form:
+    second_building_applications:
+      new:
+        back: "<<<"
+        title: "申请二教教室"
+      form:
+        submit: "提交"
+      show:
+        back: "<<<"
+        title: "申请表详情"
+        host: "主办单位"
+        charge: "负责人"
+        title: "教室申请表详情"
+        name: "姓名"
+        school: "院系"
+        contact: "联系方式"
+        speaker: "演讲人"
+        department: "工作单位"
+        tit: "职称"
+        topic: "演讲题目"
+        display: "放映内容"
+        form: "活动形式"
+        time: "%{start}-%{end}节"
+        datetime: "活动时间"
+        count: "活动人数"
+        notes: "备注"
+        chief: "教务长意见"
+        center: "指导中心意见"
+        status: "状态"
+        classroom: "教室"
+
+  blogs:
+    new:
+      title: "发表新日志"
+    form:
+      submit: "发布"
+    edit:
+      title: "修改日志"
+    navi:
+      activity: "返回活动"
+      list: "返回日志列表"
+      new: "新日志"
+    index:
+      title: "%{name}的日志"
+      empty: "没有发表日志"
+      back: "<<<"
+
+  albums:
+    navi:
+      activity: "返回活动"
+      list: "返回相册列表"
+      new: "新图片"
+    new:
+      title: "新相册"
+    index:
+      title: "%{name}的相册"
+      empty: "没有任何相册"
+      back: "<<<"
+    show:
+      title: "相册%{name}的图片"
+      empty: "相册是空的~"
+      back: "<<<"
+
+  pictures:
+    form:
+      photo: "选择图片"
+      album: "新建相册"
+    new:
+      title: "上传新的图片"
+    picture:
+      prev: "上一张"
+      next: "下一张"
+    navi:
+      activity: "返回活动"
+      list: "返回图片列表"
+      new: "新图片"
+    index:
+      title: "%{name}的图片"
+      back: "<<<"
+      empty: "还没有任何活动图片"
+
+
+  profiles:
+    groups:
+      title: "社团"
+    activities:
+      title: "活动"
+    like:
+      title: "关注"
+    fans:
+      title: "粉丝"
+    edit:
+      title: "完善您的个人信息"
+      name: "姓名"
+      nickname: "昵称"
+      gender: "性别"
+      sid: "学号"
+      phone: "电话"
+      avatar: "头像"
+      holder: "添加您的个人简介吧~"
+    side:
+      like_cnt: "%{count}人关注"
+      like: "关注"
+      dislike: "取消关注"
+    info:
+      like: "关注(%{count})"
+      fans: "粉丝(%{count})"
+      groups: "社团(%{count})"
+      activities: "活动(%{count})"
+    secondary:
+      new_group: "新建社团"
+    form:
+      male: "男生"
+      femail: "女生"
+
+  sms:
+    index:
+      title: "发送新短信"
+      back: "<<<"
+      content: "短信内容"
+      time: "发送时间"
+      status: "发送状态"
+      head: "已发短信列表"
+      holder: "写些什么呢~"
+      send: "发送"
+
+  will_paginate:
+    page_gap: "..."
+    previous_label: "<<"
+    next_label: ">>"
+
+  search:
+    groups:
+      activities: "活动(%{count})"
+      like: "关注(%{count})"
+      join: "参加(%{count})"
+      founded: "成立"
+    activities:
+      like: "关注(%{count})"
+      join: "参加(%{count})"
+      comment: "评论(%{count})"
+    profiles:
+      like: "关注(%{count})"
+      fans: "粉丝(%{count})"
+      groups: "社团(%{count})"
+      activities: "活动(%{count})"
+    index:
+      empty: "抱歉，没有找到您所需要的信息~"
+
+  mailboxes:
+    new:
+      topic: "主题"
+
+  activities:
+    new:
+      title: "新建活动"
+    form:
+      save: "完成"
+      poster: "海报"
+      banner: "横幅"
+    card:
+      like: "关注(%{count})"
+      join: "参加(%{count})"
+      comment: "评论(%{count})"
+      from: "来自"
+    filter:
+      like: "关注"
+      join: "参加"
+      pop: "热门"
+      latest: "最新"
+      all: "全部"
+      category: "类别"
+      wall: "海报墙"
+    hot:
+      hot: "热门活动"
+    wall:
+      wall: "海报墙"
+    info:
+      blogs: "日志(%{count})"
+      pictures: "照片(%{count})"
+      points: "积分(%{count})"
+      like: "关注(%{count})"
+      join: "成员(%{count})"
+    side:
+      location: "地点"
+      begin: "开始"
+      end: "结束"
+    join:
+      join: "参加"
+      exit: "退出"
+      wait: "审核中..."
+    like:
+      like: "关注"
+      unlike: "取消关注"
+    admin_panel:
+      admin: "管理"
+      info: "活动信息管理"
+      blogs: "日志管理"
+      albums: "相册管理"
+    blogs:
+      empty: "还没有日志哦~"
+    pictures:
+      empty: "还没有上传图片哦~"
+
+  admin:
+    members:
+      index:
+        back: "<<<"
+        title: "全站成员管理"
+        status: "状态"
+        number: "学号"
+        name: "姓名"
+        nickname: "昵称"
+        all: "全部"
+        approving: "审核中"
+        approved: "已批准"
+        rejected: "已否决"
+        blocked: "已锁定"
+        filter: "筛选 >>"
+    index:
+      form: "申请表管理"
+      members: "成员管理"
+      groups: "社团管理"
+      activities: "活动管理"
+      title: "后台管理入口"
+    forms:
+      show:
+        back: "<<<"
+        group: "申请社团"
+        host: "主办单位"
+        charge: "负责人"
+        title: "教室申请表详情"
+        name: "姓名"
+        school: "院系"
+        contact: "联系方式"
+        speaker: "演讲人"
+        department: "工作单位"
+        tit: "职称"
+        topic: "演讲题目"
+        display: "放映内容"
+        form: "活动形式"
+        time: "%{start}-%{end}节"
+        datetime: "活动时间"
+        count: "活动人数"
+        notes: "备注"
+        chief: "教务长意见"
+        center: "指导中心意见"
+        status: "状态"
+        submit: "提交修改"
+      index:
+        back: "<<<"
+        title: "申请表管理"
+        group: "申请社团"
+        apptime: "申请时间"
+        status: "申请状态"
+        time: "%{start}-%{end}节"
+        detail: "详情"
+        all: "全部"
+        approving: "审核中"
+        approved: "已批准"
+        rejected: "已否决"
+        filter: "筛选 >>"
+    activities:
+      index:
+        back: "<<<"
+        title: "全站活动管理"
+        activity: "活动名称"
+        group: "活动社团"
+        pub: "公开/内部活动"
+        status: "状态"
+        public: "公开"
+        private: "内部"
+        all: "全部"
+        approving: "审核中"
+        approved: "已批准"
+        rejected: "已否决"
+        blocked: "已锁定"
+        filter: "筛选 >>"
+    groups:
+      part:
+        approving: "审核中"
+        member: "普通成员"
+        admin: "管理员"
+        rejected: "拒绝"
+      forms:
+        id: "表单号"
+        time: "%{start}-%{end}节"
+        datetime: "申请时间段"
+        status: "审核状态"
+        back: "<<<"
+        title: "教室申请表管理"
+        new: "+"
+        classroom: "教室"
+      history:
+        back: "<<<"
+        title: "修改社团历史"
+        save: "保存"
+      introduction:
+        back: "<<<"
+        title: "修改社团简介"
+        save: "保存"
+        remark: "(200字以内)"
+      description:
+        title: "修改社团介绍"
+        save: "保存"
+        back: "<<<"
+        remark: "(800字以内)"
+      organization:
+        title: "修改组织构架"
+        back: "<<<"
+        save: "保存"
+      members:
+        title: "成员管理"
+        back: "<<<"
+        name: "姓名"
+        nick: "昵称"
+        id: "学号"
+        status: "状态"
+      index:
+        back: "<<<"
+        title: "全站社团管理"
+        name: "社团名称"
+        status: "状态"
+        email: "社团邮箱"
+        admin: "社长姓名"
+        phone: "社长手机"
+        all: "全部"
+        approving: "审核中"
+        approved: "已批准"
+        rejected: "已否决"
+        blocked: "已锁定"
+        filter: "筛选 >>"
+      secondary:
+        new: "新建社团"
+        edit: "编辑社团"
+        members: "管理成员"
+        activity: "新建活动"
+        forms: "管理申请表"
+        second: "新建教室申请表"
+
+  users:
+    card:
+      like: "关注(%{count})"
+      fans: "粉丝(%{count})"
+      groups: "社团(%{count})"
+      activities: "活动(%{count})"
+
+  join: "参加"

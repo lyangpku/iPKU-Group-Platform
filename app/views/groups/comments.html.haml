@@ -1,0 +1,7 @@
+.group-comments
+  .back
+    = link_to (t '.back'), @group
+  .title
+    = t '.title', :name => @group.name
+.comments
+  = render :partial => 'share/comment', :collection => @comments

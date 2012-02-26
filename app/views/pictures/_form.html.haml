@@ -1,0 +1,21 @@
+= form_for [@activity ,@picture], :html => { :multipart => true }do |f|
+  - if @picture.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@picture.errors.count, "error")
+        prohibited this picture from being saved:
+      %ul
+        - @picture.errors.full_messages.each do |msg|
+          %li= msg
+  .field
+    = f.label :album, (t :album)
+    = collection_select(:picture, :album_id, @activity.albums, :id, :title, :selected => params[:album_id])
+    = link_to (t ".album"), new_activity_album_path(@activity),:class=>"pop_fancy_box fancybox.ajax"
+  .field.area
+    = f.label :remark,(t :remark)
+    = f.text_area :remark, :rows => 1
+  .field
+    = f.label :photo, (t '.photo')
+    = f.file_field :photo
+  .actions
+    = f.submit(t :upload)

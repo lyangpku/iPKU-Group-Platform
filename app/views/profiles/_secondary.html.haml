@@ -1,0 +1,16 @@
+.secondary
+  %ul
+    %li.first= t :info
+    %li= link_to (t :home), root_path
+    %li= link_to (t :edit_profile), edit_profile_path(@profile||(@user&&@user.profile)||current_user.profile)
+    %li= link_to (t :show_profile), profile_path(@profile||(@user&&@user.profile)||current_user.profile)
+  %ul
+    %li.first= t :newsfeed
+    %li= link_to (t :my_activities), '#'
+    %li= link_to (t :my_groups), '#'
+    %li= link_to (t :my_blogs), '#'
+    %li= link_to (t :my_photos), '#'
+  %ul
+    %li.first= t :administrate
+    %li= link_to (t '.new_group'), new_group_path
+  .clear

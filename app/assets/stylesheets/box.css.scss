@@ -1,0 +1,29 @@
+@import 'css3';
+@import 'mixin';
+
+.box {
+  @include box-radius;
+  @include box-gradual-change;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+  padding: 30px 25px; 
+  background-color: white;
+
+  .logo, .avatar, .poster { 
+    img { width: 100%; @include box-radius; }
+  } 
+
+  .side { width: 180px; float: left; }
+  .info { width: 420px; float: left; margin-left: 20px; }
+
+  .info .title, .info .name { 
+    @include orange;
+    @include orange-link; 
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+}
+

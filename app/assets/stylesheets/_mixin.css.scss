@@ -1,0 +1,75 @@
+@mixin blue {
+  color: rgb(144,220,220);
+}
+
+@mixin always-fill-page {
+  min-height:100%;
+  height:auto !important;
+  height:100%;
+}
+
+@mixin orange {
+  color: rgb(226,136,26);
+}
+
+@mixin green {
+  color: rgb(202,225,119);
+}
+
+@mixin gray {
+   color: #BBB; 
+}
+
+@mixin orange-link {
+  a { @include orange; text-decoration: none; }
+}
+
+@mixin blue-link {
+  a { @include blue; text-decoration: none; }
+}
+
+@mixin green-link {
+  a { @include green; text-decoration: none; }
+}
+
+@mixin gray-link {
+  a { color: #BBB; text-decoration: none; text-align: center; }
+}
+
+@mixin link {
+  a { color: #005EAC; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+}
+
+@mixin title {
+  .title { 
+    @include orange;
+    text-align: center;
+    margin: 20px 0px;
+    font-size: 24px;
+  }
+}
+
+@mixin back {
+  .back { 
+    float: left; 
+    margin-top: 10px;
+    @include blue-link;
+  }
+}
+
+@mixin black-link($shadow:1px) {
+  a {
+    color: #333;
+    text-shadow: rgba(150, 150, 150, .7) 0px $shadow 0px;
+    text-decoration: none;
+  }
+}
+
+@mixin white-shadow {
+  color: white;
+  text-shadow: 0 -2px 2px #4D6170;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,6 @@
+.content.show
+  = render :partial => 'board', :object => @activity, :as => :activity
+  = render :partial => 'admin_panel' if can? :admin, @activity
+  = render :partial => 'blogs'
+  = render :partial => 'pictures'
+  = render :partial => 'comments'

@@ -1,0 +1,22 @@
+%h1 Listing profiles
+%table
+  %tr
+    %th Name
+    %th Nickname
+    %th Gender
+    %th Student
+    %th Phone
+    %th Points
+    %th Description
+    %th Avatar
+  - @profiles.each do |profile|
+    %tr
+      %td= profile.name
+      %td= profile.nickname
+      %td= profile.gender
+      %td= profile.student_id
+      %td= profile.phone
+      %td= profile.points
+      %td= profile.description
+      %td= profile.avatar.url(:thumb)
+%br/

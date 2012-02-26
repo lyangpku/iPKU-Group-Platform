@@ -1,0 +1,59 @@
+<h1>Listing form_second_building_applications</h1>
+
+<table>
+  <tr>
+    <th>Zhubandanwei</th>
+    <th>Fuzeren</th>
+    <th>Xingming</th>
+    <th>Yuanxi</th>
+    <th>Lianxifangshi</th>
+    <th>Zhujiangren</th>
+    <th>Gongzuodanwei</th>
+    <th>Zhicheng</th>
+    <th>Yanjiangtimu</th>
+    <th>Fangyingneirong</th>
+    <th>Huodongxingshi</th>
+    <th>Huodongshijian</th>
+    <th>Startclass</th>
+    <th>Endclass</th>
+    <th>Huodongrenshu</th>
+    <th>Zhidaozhongxin</th>
+    <th>Jiaowuzhang</th>
+    <th>Beizhu</th>
+    <th>Group</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @form_second_building_applications.each do |form_second_building_application| %>
+  <tr>
+    <td><%= form_second_building_application.zhubandanwei %></td>
+    <td><%= form_second_building_application.fuzeren %></td>
+    <td><%= form_second_building_application.xingming %></td>
+    <td><%= form_second_building_application.yuanxi %></td>
+    <td><%= form_second_building_application.lianxifangshi %></td>
+    <td><%= form_second_building_application.zhujiangren %></td>
+    <td><%= form_second_building_application.gongzuodanwei %></td>
+    <td><%= form_second_building_application.zhicheng %></td>
+    <td><%= form_second_building_application.yanjiangtimu %></td>
+    <td><%= form_second_building_application.fangyingneirong %></td>
+    <td><%= form_second_building_application.huodongxingshi %></td>
+    <td><%= form_second_building_application.huodongshijian %></td>
+    <td><%= form_second_building_application.startclass %></td>
+    <td><%= form_second_building_application.endclass %></td>
+    <td><%= form_second_building_application.huodongrenshu %></td>
+    <td><%= form_second_building_application.zhidaozhongxin %></td>
+    <td><%= form_second_building_application.jiaowuzhang %></td>
+    <td><%= form_second_building_application.beizhu %></td>
+    <td><%= form_second_building_application.group %></td>
+    <td><%= link_to 'Show', form_second_building_application %></td>
+    <td><%= link_to 'Edit', edit_form_second_building_application_path(form_second_building_application) %></td>
+    <td><%= link_to 'Destroy', form_second_building_application, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Second building application', new_form_second_building_application_path %>

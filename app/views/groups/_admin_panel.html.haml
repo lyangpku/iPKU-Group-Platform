@@ -1,0 +1,11 @@
+.admin-panel
+  .header
+    %span= t '.admin'
+  .list
+    %ul
+      %li= link_to (t '.new'), new_group_path
+      %li= link_to (t '.edit'), edit_group_path
+      %li= link_to (t '.activity'), new_group_activity_path(@group)
+      %li= link_to (t '.members'), members_admin_group_path
+      %li= link_to (t '.forms'), forms_admin_group_path
+      %li= link_to (t '.sms'), sms_group_path

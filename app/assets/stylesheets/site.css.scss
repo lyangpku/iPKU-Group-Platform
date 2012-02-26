@@ -1,0 +1,61 @@
+// Place all the styles related to the site controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import 'css3';
+@import 'mixin';
+
+.site-index { 
+  overflow: hidden;
+  .activities { margin-top: 50px; }
+}
+
+.hotspot { margin-bottom: 40px; }
+
+.hotspot .box-wrapper {
+  @include box-shadow2;
+  background-color: white;
+  padding: 20px;
+  overflow: hidden;
+  .activeSlide img { border: 0px solid #999; }
+  .banner { 
+    ul { overflow: hidden; margin-bottom: -2px; }
+    li { float: left; list-style: none; text-align: center; }
+    margin-right: 18px;
+    width: 152px;    
+    float: left;
+    img { width:150px; }
+  }
+  .medium {  
+    width: 470px; 
+    float: right; 
+    img {width:470px; overflow:hidden; } 
+  }
+}
+
+.site.home .header {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: white;
+  text-shadow: 0 -2px 2px #4D6170;
+}
+
+.site-index.main .site.inset-box {
+  background: url("polaroid.png");
+}
+
+.site.index .title { 
+  font-size: 22px;
+  width: 180px;
+  height: 50px;
+  background: url('site-index.png');
+  background-position: -35px;
+}
+
+.events { 
+  background-color: white; 
+  margin-bottom: 30px;  
+  padding: 20px;
+  @include box-shadow2;
+}

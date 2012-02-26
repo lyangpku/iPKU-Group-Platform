@@ -1,0 +1,12 @@
+.site-index
+  .hotspot
+    .box-wrapper
+      .banner
+        %ul.pager
+      .medium.pics
+        - @banners.each do |activity|
+          = image_tag activity.banner.url(:medium)
+  .title
+  .events
+    .hidden= hidden_field_tag 'id', @id
+    = render :partial => 'newsfeeds/newsfeeds'

@@ -1,0 +1,22 @@
+.info
+  .title= activity.title
+  .admin
+    %span.group-name= link_to activity.group.name.truncate(20), activity.group
+    %span= t :host
+    %span= link_to activity.admin.profile.name, activity.admin.profile
+    %span= t :organize
+  .tags
+    = render :partial=>"share/tag_list", :locals => {:tags=>activity.tags, :controller=>:activities}
+  .description
+    = activity.description
+  .meta
+    = t '.points', :count => activity.points
+    = "|"
+    = t '.like', :count => activity.followers.count
+    = "|"
+    = t '.join', :count => activity.person_cnt
+    = "|"
+    = link_to (t '.blogs', :count => activity.blogs.count), activity_blogs_path(activity)
+    = "|"
+    = link_to (t '.pictures', :count => activity.pictures.count), activity_pictures_path(activity)
+.clear
